@@ -11,14 +11,14 @@ def count_th(word):
         print(word, count)
         if len(word) > 1:
             if word[:len(target)] == target:
-                count_helper(word[1:], count + 1)
+                return count_helper(word[1:], count + 1)
             else:
-                count_helper(word[1:], count)
+                return count_helper(word[1:], count)
         else:
-            print(count)
             return count
     
     counter = count_helper(word, 0)
     return counter
+  
 
 print(count_th('abcthabcthth'))
