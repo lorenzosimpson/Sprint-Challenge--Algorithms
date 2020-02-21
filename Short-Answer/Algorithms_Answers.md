@@ -3,9 +3,9 @@
 ## Exercise I
 
 a)
-    linear time - the while loop runs n times, meaning the number of loops increases proportionally compared to n
+    linear time  O(n)- the while loop runs n times, meaning the number of loops increases proportionally compared to n
 
-b)
+b)  quadratic time O(n^2) because the while loop has to run once for every jumber from 1 to j
 
 
 c)
@@ -23,4 +23,4 @@ c)
 
     the time complexity is O(1) because no matter how high the building is, f is just equal to n
 
-    
+

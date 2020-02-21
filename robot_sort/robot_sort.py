@@ -97,7 +97,9 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        if not self.can_move_left():
+            # at the first element
+            
 
 
 if __name__ == "__main__":

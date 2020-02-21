@@ -14,7 +14,9 @@ def count_th(word):
                 count_helper(word[1:], count + 1)
             else:
                 count_helper(word[1:], count)
-        return count
+        else:
+            print(count)
+            return count
     
     counter = count_helper(word, 0)
     return counter
