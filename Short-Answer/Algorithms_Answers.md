@@ -13,14 +13,14 @@ c)
 
 ## Exercise II
 
-    - Since there's no indication of where f needs to lie in relation to n, we can assume f just has to be between 0 and n
-    - egg breaks at f or higher
-    - egg doesn't break at lower than f
-    - f can just be n, because we can assume it won't break at any floor lower than the building
-    this means no matter how tall the building, there will only be one floor (the top one) where the egg will break
+    - we are trying to solve for f
+    - we start to look at the middle floor = n / 2
+    - we try to drop the egg
+        - if it breaks, we need to go lower, so we go to floor number *half of what we're on*
+            (if we started on floor 4, go to floor 2)
+        - we do the same thing. drop the egg. if it breaks, go to half of it and go lower. if not, we can afford to go higher
+        - go to the floor halfway between the current floor and the height of the building, and try the drop again 
+    this is just like a binary search, time complexity of O(logn)
 
-    f = n 
-
-    the time complexity is O(1) because no matter how high the building is, f is just equal to n
 
 
