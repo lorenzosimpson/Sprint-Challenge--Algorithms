@@ -97,8 +97,44 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        if not self.can_move_left():
-            # at the first element
+
+        # For some reason the light matters, haven't figured out why
+        # This is just a bubble sort that performs operations in both directions
+        self.set_light_on()
+
+        while self.light_is_on():
+            self.set_light_off()
+            # starts at the first item
+            while self.can_move_right():
+                # pick up the first item, swapping it with None
+                self.swap_item()
+                self.move_right()
+                # if the item we're holding is more than the one we're in front of
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.set_light_on()
+                # go back where there's nothing
+                self.move_left()
+                # put that item down, aka swap it with nothing
+                self.swap_item()
+                # and keep going
+                self.move_right()
+
+        # do the same from the end of the list. in bubble sort you'd normally go back to the beginning, but here we're starting from the end and doing the same thing backwards
+            while self.can_move_left():
+                self.swap_item()
+                self.move_left()
+                if self.compare_item() == -1:
+                    self.swap_item()
+                    self.set_light_on()
+                self.move_right()
+                self.swap_item()
+                self.move_left()
+            
+            
+
+
+
             
 
 
