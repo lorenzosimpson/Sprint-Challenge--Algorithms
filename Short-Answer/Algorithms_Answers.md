@@ -5,7 +5,7 @@
 a)
     linear time  O(n)- the while loop runs n times, meaning the number of loops increases proportionally compared to n
 
-b)  quadratic time O(n^2) because the while loop has to run once for every jumber from 1 to j
+b)  n(logn) because j is in the body of the while loop, it's not affected by the size of n, it's just doubled
 
 
 c)
